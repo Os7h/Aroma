@@ -163,8 +163,8 @@ export function MoleculeCreateModal({
                                     renderInput={(params) => (
                                         <TextField {...params} label="Basismolekül auswählen *" />
                                     )}
-                                    value={groupMolecules.find(m => m.id === parentId) || null}
-                                    onChange={(_, newValue) => {
+                                    value={groupMolecules.find((m: any) => m.id === parentId) || null}
+                                    onChange={(_, newValue: any) => {
                                         setParentId(newValue ? newValue.id : null);
                                         // Auto-fill some fields from parent if they are empty
                                         if (newValue && !descriptorsDe) setDescriptorsDe(newValue.descriptors_de || '');
