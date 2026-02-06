@@ -33,6 +33,8 @@ export function AuthButton() {
                     .eq('id', userId)
                     .single()
 
+                const profile = data as any // FIX: Bypass missing type definition
+
                 // console.log("Role check result:", data, error)
 
                 if (error && retryCount < 3 && mounted) {
@@ -42,7 +44,7 @@ export function AuthButton() {
                 }
 
                 if (mounted) {
-                    if (data && data.role === 'admin') {
+                    if (profile && profile.role === 'admin') {
                         setAdminMode(true)
                     } else {
                         setAdminMode(false)
