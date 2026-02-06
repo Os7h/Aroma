@@ -25,7 +25,7 @@ export async function updateTemperatureRange({
                 temp_start_c: tempStartC,
                 temp_end_c: tempEndC,
                 behavior_description_de: behaviorDescriptionDe || null,
-            })
+            } as any)
             .select();
 
         if (error) throw error;
