@@ -163,13 +163,13 @@ export function MoleculeEditModal({
                     </Typography>
 
                     <Autocomplete
-                        options={groupMolecules.filter(m => m.id !== molecule.id)}
-                        getOptionLabel={(option) => option.name_de}
+                        options={groupMolecules.filter((m: any) => m.id !== molecule.id)}
+                        getOptionLabel={(option: any) => option.name_de}
                         renderInput={(params) => (
                             <TextField {...params} label="Basismolekül (optional)" />
                         )}
-                        value={groupMolecules.find(m => m.id === parentId) || null}
-                        onChange={(_, newValue) => setParentId(newValue ? newValue.id : null)}
+                        value={groupMolecules.find((m: any) => m.id === parentId) || null}
+                        onChange={(_, newValue: any) => setParentId(newValue ? newValue.id : null)}
                         disabled={isPending}
                     />
 
