@@ -159,7 +159,7 @@ export function MoleculeCreateModal({
                             <Box sx={{ mt: 2, display: 'flex', flexDirection: 'column', gap: 2, pl: 2, borderLeft: '2px solid #eee' }}>
                                 <Autocomplete
                                     options={groupMolecules}
-                                    getOptionLabel={(option) => option.name_de}
+                                    getOptionLabel={(option: any) => option.name_de}
                                     renderInput={(params) => (
                                         <TextField {...params} label="Basismolekül auswählen *" />
                                     )}
